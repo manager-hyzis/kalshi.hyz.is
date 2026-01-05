@@ -1,218 +1,114 @@
-# 🚀 Kalshi - Decentralized Prediction Markets
+# 🚀 Launch Your Decentralized Prediction Market in Minutes
 
-[![License: MIT+Commons](https://img.shields.io/badge/License-MIT--Commons-blue.svg)](./LICENSE)
+> **🚨 Big Announcement (05 Jan 2026): Forkast is now Kuest.** This repo has been reset for clean redeploys — expect to redeploy from scratch, reset the DB, and update your env vars, URLs, and docs.
 
-Open-source decentralized prediction market platform built on Polygon blockchain with full transparency and control.
+[![License: Kuest MIT+Commons](https://img.shields.io/badge/License-Kuest--MIT--Commons-blue.svg)](./LICENSE) [![CI](https://github.com/kuestcom/prediction-market/actions/workflows/ci.yml/badge.svg)](https://github.com/kuestcom/prediction-market/actions/workflows/ci.yml)
 
-## ✨ Features
+[![Kuest Banner](https://i.imgur.com/G9wM4Na.png)](https://kuest.com)
 
-- **⚡ Fast & Scalable:** Built on Polygon for minimal fees and instant transactions
-- **📊 Real-time Markets:** Live prediction markets with instant price updates
-- **🔐 Secure:** Smart contracts with transparent on-chain operations
-- **💳 Web3 Native:** MetaMask and Reown AppKit wallet integration
-- **📱 Mobile Ready:** Responsive design for all devices
-- **🎨 Modern UI:** Polymarket-inspired interface with advanced charts
+Open-source project to launch and monetize Web3 prediction markets, inspired by Polymarket, but with full transparency and control.
 
-## 🛠️ Tech Stack
+## ✨ Core Benefits
 
-- **Frontend:** Next.js 16 (React 19, TypeScript, Tailwind CSS, Zustand)
-- **Backend/Database:** PostgreSQL with Drizzle ORM
-- **Authentication:** Better Auth + SIWE (Sign-In with Ethereum)
+Tired of centralized platforms? Want to build your own business in the DeFi space? This project offers you:
+
+- **⚡ Rapid Launch:** Get your prediction market website running in **minutes**, not months.
+- **📈 Ready Events & Liquidity:** We sync popular events from platforms like Polymarket, ensuring you have active markets with initial liquidity for your users.
+- **💰 Earn Fees Automatically:** Earn **1% of traded volume** on your fork, directly via smart contracts. Another 1% goes to maintain backend infrastructure, blockchain operations, and continuous development of the base protocol.
+- **🛠️ Hassle-Free & Transparent:** Infrastructure is managed for you, while you keep full control over the code and operations. Focus on growing your community and contributing to a decentralized ecosystem.
+- **💸 Arbitrage Opportunities:** Your users can profit from price differences between your platform and other prediction markets like Polymarket, creating natural trading volume and liquidity.
+- **⚡ Built on Polygon:** Fast transactions with minimal fees, ideal for traders and scaling your market.
+- **🗳️ Fair Event Resolution (via UMA/Oracles):** A global voting area ensures fairness and security of results.
+
+## 🛠️ Get Started Now!
+
+Follow these simple steps to launch your own prediction market:
+
+### 1. Fork the Repository
+
+Click the **Fork** button in the top right corner (and feel free to leave a **⭐ star**!)
+
+### 2. Create a New Project on Vercel
+
+1. Go to [Vercel](https://vercel.com) dashboard
+2. Select **Add New** → **Project**
+3. Connect your **GitHub account**
+4. Import and Deploy your **forked repository**
+
+*Note: The initial deployment may fail due to missing environment variables. This is expected.
+Complete Step 3 (Supabase) and Step 4 (environment) first, then redeploy from your project dashboard.*
+
+### 3. Create Database (Supabase)
+
+   1. Go to your project dashboard
+   2. Navigate to the **Storage** tab
+   3. Find **Supabase** in the database list and click **Create**
+   4. Keep all default settings and click **Create** in the final step
+   5. Once ready, click the **Connect Project** button to link to your project
+
+### 4. Configure Your Environment
+
+   1. **Download** the `.env.example` file from this repository
+   2. **Edit** it with your configuration:
+      - **Kuest CLOB Ordersbook**: Connect your wallet at [auth.kuest.com](https://auth.kuest.com), sign to verify ownership, and copy the API key, secret, and passphrase
+      - **Reown AppKit**: Get Project ID at [dashboard.reown.com](https://dashboard.reown.com)
+      - **Better Auth**: Generate secret at [better-auth.com](https://www.better-auth.com/docs/installation#set-environment-variables)
+      - **CRON_SECRET**: Create a random secret of at least 16 characters
+   3. Go to your Vercel project dashboard
+   4. Navigate to **Settings** → **Environment Variables**
+   5. Click **"Import .env"** button
+   6. Select your edited `.env.example` file
+
+### 5. Redeploy your project
+
+*Optionally, add your custom domain in **Settings** → **Domains** on your project dashboard.*
+
+### 6. Sync Your Fork (via GitHub Actions)
+
+In your forked Kuest repository:
+1. Go to **Settings** → **Actions** → **General**
+2. Select **"Allow all actions and reusable workflows"**
+3. Click **Save** - This enables automatic sync with the main repository
+
+**Ready! 🎉** Your prediction market will be online with automatic database setup in a few minutes.
+
+## 🎯 Features
+
+- 📱 Mobile Ready
+- 🎨 Modern UI/UX (Polymarket-style)
+- 📚 Docs
+- 👨‍💻 API
+- ⚡ Live Price Updates
+- 💳 Web3 Wallets (MetaMask, Reown AppKit)
+- 📊 Advanced Charts & Analytics
+- 🔒 Secure Smart Contracts
+
+## 🔧 Tech Stack
+
+- **Frontend:** Next.js 16 (React 19, TS, Tailwind, Zustand, @visx)
+- **Backend/DB:** Supabase (Postgres, Drizzle)
+- **Auth:** Better Auth + SIWE
 - **Blockchain:** Polygon (viem, wagmi)
-- **Storage:** Cloudflare R2
 
-## 🚀 Quick Start
+## ⚠️ Disclaimer
 
-### Prerequisites
+Kuest is provided "as is" and should be used at your own risk. Review the [Modified MIT License with Commons Clause](./LICENSE) before deploying production forks: running derivatives that alter the core on-chain contracts or orderbook modules may fall outside the permitted use. Always verify smart contracts and comply with relevant regulations in your jurisdiction.
 
-- Node.js 18+
-- pnpm (package manager)
-- PostgreSQL database
-- Polygon RPC endpoint
+## 🔗 Links
 
-### Installation
+<div align="center">
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/kalshi.git
-   cd kalshi
-   ```
+**📚 [Documentation](https://kuest.com/docs/users)** •
+**🚀 [Live Demo](https://kuest.com)** •
+**🗺️ [Roadmap](https://github.com/orgs/kuestcom/discussions/51)** •
+**💬 [Discussions](https://github.com/orgs/kuestcom/discussions)**
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
-
-3. **Configure environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-
-   Edit `.env.local` with your configuration:
-   ```bash
-   # Database
-   POSTGRES_URL=postgresql://user:password@host:5432/database
-
-   # Authentication
-   BETTER_AUTH_SECRET=your-random-secret-32-chars
-
-   # Blockchain
-   NEXT_PUBLIC_REOWN_APPKIT_PROJECT_ID=your-project-id
-
-   # CLOB API
-   FORKAST_ADDRESS=your-address
-   FORKAST_API_KEY=your-key
-   FORKAST_API_SECRET=your-secret
-   FORKAST_PASSPHRASE=your-passphrase
-
-   # Storage
-   CLOUDFLARE_ACCOUNT_ID=your-account-id
-   CLOUDFLARE_R2_ACCESS_KEY_ID=your-key-id
-   CLOUDFLARE_R2_SECRET_ACCESS_KEY=your-secret-key
-   CLOUDFLARE_R2_BUCKET_NAME=your-bucket
-   CLOUDFLARE_R2_PUBLIC_URL=https://your-cdn-url
-
-   # Cron Jobs
-   CRON_SECRET=your-random-secret-16-chars
-   VERCEL_PROJECT_PRODUCTION_URL=https://your-domain.com
-   ```
-
-4. **Run database migrations**
-   ```bash
-   pnpm run migrate
-   ```
-
-5. **Start development server**
-   ```bash
-   pnpm run dev
-   ```
-
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 📦 Database Setup
-
-This project uses **Drizzle ORM** with **PostgreSQL**. Migrations are managed automatically.
-
-### Running Migrations
-
-Migrations are applied automatically during deployment. To manually run migrations:
-
-```bash
-pnpm run migrate
-```
-
-This script:
-- Connects to your PostgreSQL database via `POSTGRES_URL`
-- Applies all pending migrations from `src/lib/db/migrations/`
-- Creates scheduled cron jobs for market synchronization
-
-## ⏰ Scheduled Jobs (Cron)
-
-The project includes three automated cron jobs for market synchronization:
-
-### 1. sync-events (Every 5 minutes)
-- Syncs prediction markets from the Goldsky PnL subgraph
-- Endpoint: `GET /api/sync/events`
-- Schedule: `*/5 * * * *`
-
-### 2. sync-volume (Every 30 minutes)
-- Updates market volume and trading data
-- Endpoint: `GET /api/sync/volume`
-- Schedule: `*/30 * * * *`
-
-### 3. clean-cron-details (Daily at midnight)
-- Cleans up old cron job logs
-- Schedule: `0 0 * * *`
-
-### Setting Up Crons with Dokploy
-
-If deploying with **Dokploy**, configure schedule jobs in the dashboard:
-
-1. Go to your project → **Schedule Jobs**
-2. Create three new scheduled jobs:
-
-**Job 1: sync-events**
-- Schedule: `*/5 * * * *`
-- Command: `curl -X GET https://your-domain.com/api/sync/events -H "Authorization: Bearer YOUR_CRON_SECRET"`
-
-**Job 2: sync-volume**
-- Schedule: `*/30 * * * *`
-- Command: `curl -X GET https://your-domain.com/api/sync/volume -H "Authorization: Bearer YOUR_CRON_SECRET"`
-
-**Job 3: clean-cron-details**
-- Schedule: `0 0 * * *`
-- Command: Handled automatically by PostgreSQL pg_cron extension
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-# Unit tests
-pnpm run test
-
-# E2E tests
-pnpm run test:e2e
-
-# Type checking
-pnpm run type-check
-```
-
-## 📝 Scripts
-
-```bash
-pnpm run dev          # Start development server
-pnpm run build        # Build for production
-pnpm run start        # Start production server
-pnpm run migrate      # Run database migrations
-pnpm run test         # Run unit tests
-pnpm run test:e2e     # Run E2E tests
-pnpm run type-check   # Check TypeScript types
-pnpm run lint         # Run ESLint
-```
-
-## 🔗 API Endpoints
-
-### Markets
-- `GET /api/events` - List all events
-- `GET /api/events/[slug]` - Get event details
-- `GET /api/markets` - List all markets
-- `GET /api/markets/[id]` - Get market details
-
-### Trading
-- `POST /api/orders` - Place a new order
-- `GET /api/orders` - Get user orders
-- `GET /api/open-orders` - Get open orders
-
-### User
-- `GET /api/users/[address]` - Get user profile
-- `GET /api/users/[address]/portfolio` - Get user portfolio
-
-## 📚 Documentation
-
-- [API Documentation](./docs/developers/markets-api/)
-- [Trading Guide](./docs/users/getting-started/)
-- [Architecture](./docs/developers/)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License with Commons Clause. See the [LICENSE](./LICENSE) file for details.
-
-## 💬 Support
-
-- **Issues:** [GitHub Issues](https://github.com/yourusername/kalshi/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/kalshi/discussions)
+**📱 [Discord](https://discord.gg/vSSnkJvypS)** •
+**🐦 [X (Follow us)](https://x.com/kuest)** •
+**🐛 [Issues](https://github.com/kuestcom/prediction-market/issues)** •
+**⭐ [Contribute](https://github.com/kuestcom/prediction-market/blob/main/CONTRIBUTING.md)**
 
 ---
-
-**Built with ❤️ for the decentralized prediction market ecosystem**
+*🚧 This project is under active development.
+Developers and contributors are welcome to join and help build Kuest into a fully decentralized ecosystem.*
+</div>
